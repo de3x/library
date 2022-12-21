@@ -91,7 +91,7 @@ body {
 
 .add-book-form {
   /* temporary - change display back to none to hide popup */
-  display: flex;
+  display: none;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -104,11 +104,31 @@ body {
   padding: 16px;
 }
 
+.close-form-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  place-content: center;
+  width: 10%;
+  height: 10%;
+  /* background-color: hotpink; */
+  text-align: center;
+  /* border: 1px solid black;
+  border-right: none;
+  border-top: none; */
+}
+
+.close-form-btn:hover {
+  cursor: pointer;
+}
+
 .form-header {
   text-align: center;
   font-weight: 700;
   font-size: 1.25rem;
   padding-bottom: 8px;
+  padding-top: 24px;
 }
 
 .input-wrapper {

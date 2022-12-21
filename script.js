@@ -24,3 +24,6 @@ function openForm() {
 function closeForm() {
   document.querySelector('.add-book-form').style.display = 'none';
 }
+
+const closeFormBtn = document.querySelector('.close-form-btn');
+closeFormBtn.addEventListener('click', closeForm);
