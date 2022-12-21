@@ -77,3 +77,54 @@ h6 {
 }
 
 /* My Own styles */
+html,
+body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-wrapper {
+  min-height: 100%;
+  position: relative;
+  background-color: darkkhaki;
+}
+
+.add-book-form {
+  /* temporary - change display back to none to hide popup */
+  display: flex;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  flex-direction: column;
+  background-color: beige;
+  gap: 16px;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.form-header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding-bottom: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* text-align: center; */
+  font-weight: 400;
+  padding-bottom: 8px;
+  gap: 8px;
+}
+
+.radio-options-wrapper {
+  align-self: center;
+}

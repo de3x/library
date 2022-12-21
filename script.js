@@ -17,6 +17,10 @@ function addBooktoLibrary(title, author, pages, completed) {
   // todo
 }
 
-// Example Book
-// const flies = new Book('Lord of the Flies', 'William Golding', 321, true);
-// console.log(flies.info());
+function openForm() {
+  document.querySelector('.add-book-form').style.display = 'flex';
+}
+
+function closeForm() {
+  document.querySelector('.add-book-form').style.display = 'none';
+}

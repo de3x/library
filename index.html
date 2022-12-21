@@ -8,8 +8,48 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main>
-      <h1>Placeholder title</h1>
+    <main class="main-wrapper">
+      <!-- Add book button -->
+
+      <button class="add-book" onclick="openForm()">Add Book</button>
+      <!-- The form -->
+      <div class="form-popup">
+        <form class="add-book-form" action="#" method="">
+          <p class="form-header">Add new book</p>
+          <div class="input-wrapper">
+            <label for="title">Title:</label>
+            <input type="text" id="title" />
+          </div>
+          <div class="input-wrapper">
+            <label for="author">Author:</label>
+            <input type="text" id="author" />
+          </div>
+          <div class="input-wrapper">
+            <label for="pages">Page count:</label>
+            <input type="number" id="pages" />
+          </div>
+          <div class="radio-wrapper">
+            <p>Have you read it?</p>
+            <div class="radio-options-wrapper">
+              <div>
+                <input
+                  type="radio"
+                  id="unread"
+                  name="completed"
+                  value="unread"
+                  checked
+                />
+                <label for="unread">Not yet</label>
+              </div>
+              <div>
+                <input type="radio" id="read" name="completed" value="read" />
+                <label for="read">Yep!</label>
+              </div>
+            </div>
+          </div>
+          <button type="button">Add Book</button>
+        </form>
+      </div>
     </main>
     <script src="./script.js"></script>
   </body>
