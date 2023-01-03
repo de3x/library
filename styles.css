@@ -173,7 +173,7 @@ main {
 #library {
   width: 850px;
   display: grid;
-  gap: 8px;
+  gap: 16px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   margin-top: 24px;
   margin-bottom: 24px;
