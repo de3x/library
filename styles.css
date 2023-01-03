@@ -83,13 +83,20 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.btn {
+  border-radius: 4px;
+}
+
+.open-form-btn {
+}
+
 .main-wrapper {
   min-height: 100%;
   position: relative;
   background-color: darkkhaki;
 }
 
-.add-book-form {
+#add-book-form {
   /* temporary - change display back to none to hide popup */
   display: none;
   position: fixed;
@@ -147,4 +154,43 @@ body {
 
 .radio-options-wrapper {
   align-self: center;
+}
+
+#library {
+  border: 2px solid red;
+  /* padding: 24px; */
+  width: 850px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.card {
+  border: 2px solid green;
+  background-color: white;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.library-title {
+  text-align: center;
+}
+
+.library-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.unread {
+  background-color: #ff8282;
+}
+
+.read {
+  background-color: greenyellow;
 }

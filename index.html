@@ -9,12 +9,9 @@
   </head>
   <body>
     <main class="main-wrapper">
-      <!-- Add book button -->
-
-      <button class="add-book" onclick="openForm()">Add Book</button>
       <!-- The form -->
       <div class="form-popup">
-        <form class="add-book-form" action="#" method="">
+        <form id="add-book-form" action="#" method="">
           <div class="close-form-btn">X</div>
           <p class="form-header">Add new book</p>
           <div class="input-wrapper">
@@ -48,8 +45,16 @@
               </div>
             </div>
           </div>
-          <button type="button">Add Book</button>
+          <button class="btn" type="button" id="createbook">Add Book</button>
         </form>
+      </div>
+      <div class="library-wrapper">
+        <h3 class="library-title">My Library</h3>
+        <div id="library"></div>
+        <!-- Add book button -->
+        <button class="btn open-form-btn" onclick="openForm()">
+          + Add book
+        </button>
       </div>
     </main>
     <script src="./script.js"></script>
