@@ -109,11 +109,9 @@ main {
 .main-wrapper {
   min-height: 100%;
   position: relative;
-  background-color: rgb(250, 235, 215);
 }
 
 #add-book-form {
-  /* temporary - change display back to none to hide popup */
   display: none;
   position: fixed;
   left: 50%;

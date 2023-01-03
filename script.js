@@ -1,3 +1,6 @@
+const closeFormBtn = document.querySelector('.close-form-btn');
+const library = document.getElementById('library');
+
 const myLibrary = [];
 
 // Functions
@@ -15,6 +18,7 @@ function clearFormInput() {
   document.getElementById('add-book-form').reset();
 }
 
+// The Book Constructor
 function Book(title, author, pagecount, completed) {
   this.title = title;
   this.author = author;
@@ -62,10 +66,7 @@ document
   .getElementById('createbook')
   .addEventListener('click', addBooktoLibrary);
 
-const closeFormBtn = document.querySelector('.close-form-btn');
 closeFormBtn.addEventListener('click', closeForm);
-
-const library = document.getElementById('library');
 
 function displayBooks() {
   // Empty library div of all children before updating to avoid duplication
@@ -133,3 +134,10 @@ function overlayOn() {
 function overlayOff() {
   document.getElementById('overlay').style.display = 'none';
 }
+
+// Close popup form when clicking elsewhere on screen (on overlay)
+const overlay = document.getElementById('overlay');
+overlay.addEventListener('click', () => {
+  closeForm();
+  overlayOff();
+});
