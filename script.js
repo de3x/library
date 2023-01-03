@@ -3,10 +3,12 @@ const myLibrary = [];
 // Functions
 function openForm() {
   document.getElementById('add-book-form').style.display = 'flex';
+  overlayOn();
 }
 
 function closeForm() {
   document.getElementById('add-book-form').style.display = 'none';
+  overlayOff();
 }
 
 function clearFormInput() {
@@ -74,6 +76,8 @@ function displayBooks() {
     const newCard = document.createElement('div');
     // Add data-id to identify later for Delete Button
 
+    const spacer = document.createElement('div');
+    spacer.classList.add('spacer');
     const p1 = document.createElement('p');
     const p2 = document.createElement('p');
     const p3 = document.createElement('p');
@@ -87,13 +91,13 @@ function displayBooks() {
     };
     const readButton = document.createElement('button');
     readButton.innerText =
-      book.readStatus === 'Unread' ? 'Not Yet Read' : 'Finished Reading';
+      book.readStatus === 'Unread' ? 'Not Yet Read' : 'Finished';
     let buttonStyle = book.readStatus === 'Unread' ? 'unread' : 'read';
     readButton.classList.add(buttonStyle);
     readButton.onclick = function () {
       if (myLibrary[index].readStatus === 'Unread') {
         myLibrary[index].readStatus = 'Completed';
-        readButton.innerText = 'Finished Reading';
+        readButton.innerText = 'Finished';
         readButton.classList.remove('unread');
         readButton.classList.add('read');
       } else if (myLibrary[index].readStatus === 'Completed') {
@@ -110,7 +114,7 @@ function displayBooks() {
     p4.append(`Status: ${book.readStatus}`);
     p5.append(`Index: ${index}`);
 
-    newCard.append(p1, p2, p3, readButton, deleteButton);
+    newCard.append(p1, p2, p3, spacer, readButton, deleteButton);
     newCard.classList.add('card');
     library.append(newCard);
   });
@@ -120,4 +124,12 @@ function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
+}
+
+function overlayOn() {
+  document.getElementById('overlay').style.display = 'block';
+}
+
+function overlayOff() {
+  document.getElementById('overlay').style.display = 'none';
 }
